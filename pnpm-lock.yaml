@@ -7,6 +7,9 @@ dependencies:
   '@fontsource/sora':
     specifier: ^4.5.12
     version: 4.5.12
+  gsap:
+    specifier: ^3.11.5
+    version: 3.11.5
   normalize.css:
     specifier: ^8.0.1
     version: 8.0.1
@@ -19,6 +22,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-gsap:
+    specifier: ^3.2.1
+    version: 3.2.1(gsap@3.11.5)(react-dom@18.2.0)(react@18.2.0)
   react-router-dom:
     specifier: ^6.11.1
     version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
@@ -2621,6 +2627,10 @@ packages:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
 
+  /gsap@3.11.5:
+    resolution: {integrity: sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==}
+    dev: false
+
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -3176,6 +3186,20 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-gsap@3.2.1(gsap@3.11.5)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-IX6XiN1a74hmU385yNZAYV1cFe3/Xmbg8eT99VCjmz7yzQq1qIsR47gkX5rkWeml9KmyEgiIzqArYaipPkKIbw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      gsap: '>=3'
+      react: ^16.0.0-0 || ^17.0.0-0
+      react-dom: ^16.0.0-0 || ^17.0.0-0
+    dependencies:
+      gsap: 3.11.5
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-is: 16.13.1
     dev: false
 
   /react-is@16.13.1:
