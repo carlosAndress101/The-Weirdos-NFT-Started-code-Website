@@ -45,7 +45,7 @@ function Faq() {
 
     let element = ref.current;
 
-    ScrollTrigger.create({
+    const scrollMetho = ScrollTrigger.create({
       trigger: element,
       start:'top top',
       end:'bottom top',
@@ -55,8 +55,9 @@ function Faq() {
       markers: false,
     })
 
+
     return () => {
-      ScrollTrigger.killAll();
+      scrollMetho.kill();
     }
   },[])
 
