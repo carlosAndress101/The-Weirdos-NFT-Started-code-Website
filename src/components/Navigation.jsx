@@ -4,9 +4,8 @@ import Button from "./Button";
 
 const Section = styled.section`
   width: 100vw;
-  background.color: ${(props) => props.theme.body};
+  background-color: ${props => props.theme.body};
 `;
-
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -16,14 +15,12 @@ const NavBar = styled.nav`
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
 `;
-
 const Menu = styled.ul`
 display: flex;
 justify-content: space-between;
 align-items: center;
 list-style: none;
 `
-
 const MenuItem = styled.li`
 margin: 0 1rem;
 color: ${props => props.theme.text};
@@ -47,17 +44,28 @@ cursor: pointer;
 
 
 const Navigation = () => {
+
+const scrollTo = (id) =>{
+  let element = document.getElementById(id);
+
+  element.scrollIntoView({
+    behavior: 'smooth',
+    block:'start',
+    inline:'nearest'
+  })
+}
+
   return (
     <Section>
       <NavBar>
         <Logo />
         <Menu>
-          <MenuItem>Home</MenuItem>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Roadmap</MenuItem>
-          <MenuItem>Showcase</MenuItem>
-          <MenuItem>Team</MenuItem>
-          <MenuItem>Faq</MenuItem>
+          <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
+          <MenuItem onClick={()=> scrollTo('about')}>About</MenuItem>
+          <MenuItem onClick={()=> scrollTo('roadmap')}>Roadmap</MenuItem>
+          <MenuItem onClick={()=> scrollTo('showcase')}>Showcase</MenuItem>
+          <MenuItem onClick={()=> scrollTo('team')}>Team</MenuItem>
+          <MenuItem onClick={()=> scrollTo('faq')}>Faq</MenuItem>
         </Menu>
         <Button text="Connect Wallet" link="https://google.com"/>
       </NavBar>

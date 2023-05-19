@@ -66,7 +66,7 @@ align-self: flex-start;
 
 function About() {
   return (
-    <Section>
+    <Section id='about'>
       <Container>
         <Box> <Carousel/> </Box>
         <Box><Title>Welcome To The Weirdos Club.
