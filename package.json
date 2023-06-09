@@ -10,28 +10,28 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/akaya-telivigala": "^4.5.8",
-    "@fontsource/sora": "^4.5.12",
-    "gsap": "^3.11.5",
+    "@fontsource/akaya-telivigala": "^5.0.2",
+    "@fontsource/sora": "^5.0.2",
+    "gsap": "^3.12.1",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-gsap": "^3.2.1",
-    "react-router-dom": "^6.11.1",
+    "react-router-dom": "^6.12.1",
     "react-use": "^17.4.0",
-    "styled-components": "6.0.0-rc.1",
-    "swiper": "^9.3.1",
-    "typewriter-effect": "^2.19.0"
+    "styled-components": "6.0.0-rc.3",
+    "swiper": "^9.3.2",
+    "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.6",
+    "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
-    "@vitejs/plugin-react-swc": "^3.3.1",
-    "eslint": "^8.40.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.42.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
-    "vite": "^4.3.5"
+    "vite": "^4.3.9"
   }
 }
