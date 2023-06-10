@@ -15,7 +15,22 @@ const NavBar = styled.nav`
   width: 85%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
+
+  .mobil{
+    display: none;
+  }
+
+  @media (max-width: 64em){
+    .desktop{
+      display: none;
+    }
+
+    .mobil{
+    display: inline-block;
+    }
+  }
 `;
+
 const Menu = styled.ul`
 display: flex;
 justify-content: space-between;
@@ -60,6 +75,14 @@ cursor: pointer;
 
 &:hover::after{
   width: 100%;
+}
+
+@media (max-width: 64em){
+  margin: 1rem 0;
+
+  &::after{
+    display: none;
+  }
 }
 `;
 
@@ -118,6 +141,8 @@ const scrollTo = (id) =>{
     block:'start',
     inline:'nearest'
   })
+
+  setClick(!click)
 }
 
   return (
@@ -134,8 +159,15 @@ const scrollTo = (id) =>{
           <MenuItem onClick={()=> scrollTo('showcase')}>Showcase</MenuItem>
           <MenuItem onClick={()=> scrollTo('team')}>Team</MenuItem>
           <MenuItem onClick={()=> scrollTo('faq')}>Faq</MenuItem>
+          <MenuItem>
+          <div className="mobil">
+          <Button text="Connect Wallet" link="https://google.com"/>
+          </div>
+          </MenuItem>
         </Menu>
-        <Button text="Connect Wallet" link="https://google.com"/>
+        <div className="desktop">
+          <Button text="Connect Wallet" link="https://google.com"/>
+        </div>
       </NavBar>
     </Section>
   );
