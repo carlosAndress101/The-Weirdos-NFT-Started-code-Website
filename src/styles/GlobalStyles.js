@@ -4,6 +4,10 @@ import "@fontsource/sora";
 
 const GlobalStyles = createGlobalStyle`
 
+/* *{
+    outline: 1px solid red !important; 
+} */
+
 
 *,*::before,*::after{
     margin: 0;

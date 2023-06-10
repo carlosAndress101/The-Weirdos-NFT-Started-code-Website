@@ -29,6 +29,10 @@ const Title = styled.h1`
   border-bottom: 2px solid ${props => props.theme.text};
   width: fit-content;
 
+  @media (max-width: 40em){
+    font-size: ${(props) => props.theme.fontxl};
+  }
+
 `;
 const Container = styled.div`
 width: 75%;
@@ -37,6 +41,14 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
+
+@media (max-width: 64em){
+    width: 80%;
+}
+@media (max-width: 48em){
+    width: 90%;
+    justify-content: center;
+}
 `;
 const ImageContainer = styled.div`
 width: 80%;
@@ -72,6 +84,10 @@ transition: all 0.3s ease;
   img{
     transform: translateY(-2rem) scale(1.2);
   }
+}
+
+@media (max-width: 30em){
+    width: 70vw;
 }
 `;
 const Name = styled.h2`

@@ -50,11 +50,12 @@ z-index: 50;
 background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.85)`};
 backdrop-filter: blur(2px);
 
-transform: ${props => props.click ? 'translateY(0)' : `translateY(100%)`};
+transform: ${props => props.click ? 'translateY(0)' : `translateY(1000%)`};
 transition: all 0.3s ease;
 
 flex-direction: column;
 justify-content: center;
+touch-action: none;
 }
 `;
 

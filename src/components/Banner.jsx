@@ -18,6 +18,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 overflow:hidden;
+
+@media (max-width: 48em){
+    height: 15rem;
+    flex-direction: column;
+}
 `;
 const ImageContainer = styled.div`
 width: 100%;
@@ -35,6 +40,13 @@ img{
     width: 15rem;
     height: auto;
 }
+
+@media (max-width: 48em){
+    img{
+    width: 10rem;
+    height: auto;
+    }
+}
 `;
 const Title = styled.h1`
 font-size: ${props => props.theme.fontxxxl};
@@ -45,11 +57,27 @@ width: 35%;
 text-transform: capitalize;
 
 text-shadow: 1px 1px 2px ${props => props.theme.text};
+
+@media (max-width: 64em){
+    text-align: center;
+    width: 40%;
+    font-size: ${props => props.theme.fontxxl};
+}
+@media (max-width: 48em){
+    width: 100%;
+    padding: 2rem 0;
+    font-size: ${props => props.theme.fontxl};
+}
 `
 const BtnContainer = styled.div`
 width: 35%;
 display: flex;
 justify-content: flex-end;
+
+@media (max-width: 48em){
+    width: 100%;
+    justify-content: center;
+}
 `;
 const JoiNow = styled.button`
 display: inline-block;
@@ -65,6 +93,14 @@ border-radius: 50px;
 cursor: pointer;
 transition: all 0.2s ease;
 position: relative;
+
+@media (max-width: 48em){
+    padding: 1rem 2rem;
+}
+@media (max-width: 30em){
+    padding: 0.5 2rem;
+    font-size: ${props => props.theme.fontsm};
+}
 
 
 &:hover{
