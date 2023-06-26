@@ -26,7 +26,6 @@ function App() {
         <Faq/>        
         <Footer/>        
         <ScrollToTop/>
-        
       </ThemeProvider>
     </>
   );
